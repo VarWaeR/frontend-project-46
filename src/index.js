@@ -16,16 +16,16 @@ const genDiff = () => {
     const keysData2 = Object.keys(file2);
     const keys = _.sortBy(_.uniq([...keysData1, ...keysData2]));
     return keys.map((key) => {
-        if (!Object.hasOwn(obj1, key)) {
-            return `+ ${key}: ${jsonFile2[key]}`;
+        if (!Object.hasOwn(file1, key)) {
+            return `+ ${key}: ${file2[key]}`;
           }
-        if (!Object.hasOwn(obj2, key)) {
-            return `- ${key}: ${jsonFile1[key]}`;
+        if (!Object.hasOwn(file2, key)) {
+            return `- ${key}: ${file1[key]}`;
           }
-        if (_.isEqual(obj1[key], obj2[key])) {
-            return `  ${key}: ${jsonFile1[key]}`;
+        if (_.isEqual(file1[key], file2[key])) {
+            return `  ${key}: ${file1[key]}`;
           }
-        return `- ${key}: ${jsonFile1[key]}\n+${key}: ${jsonFile2[key]}`;
+        return `- ${key}: ${file1[key]} \n +${key}: ${file2[key]}`;
     })
 };
 
