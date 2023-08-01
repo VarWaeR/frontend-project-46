@@ -11,19 +11,6 @@ const genDiff = (filepath1, filepath2) => {
   const data1 = getFileText(filepath1);
   const data2 = getFileText(filepath2);
 
-  const obj1 = getFileData(data1, extension1);
-  const obj2 = getFileData(data2, extension2);
-
-  return makeTree(obj1, obj2);
-
-};
-
-
-const genDiff = (filepath1, filepath2) => {
-
-  const data1 = getFileText(filepath1);
-  const data2 = getFileText(filepath2);
-
   const keysData1 = Object.keys(data1);
   const keysData2 = Object.keys(data2);
 
@@ -45,5 +32,4 @@ const genDiff = (filepath1, filepath2) => {
   return result;
 };
 
-export default genDiff;
 export default genDiff;
