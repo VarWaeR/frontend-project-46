@@ -11,10 +11,11 @@ const getFileText = (filename) => {
 const genDiff = (filepath1, filepath2) => {
   const data1 = getFileText(filepath1);
   const data2 = getFileText(filepath2);
+  const parcedData1 = JSON.parse(data1);
+  const parcedData2 = JSON.parse(data2);
   console.log(data1);
-  const keysData1 = Object.keys(data1);
-  const keysData2 = Object.keys(data2);
-  console.log(keysData1);
+  const keysData1 = Object.keys(parcedData1);
+  const keysData2 = Object.keys(parcedData2);
   const result = {};
   const keys = _.sortBy(_.uniq([...keysData1, ...keysData2]));
   keys.map((key) => {
@@ -27,10 +28,8 @@ const genDiff = (filepath1, filepath2) => {
     if (keysData1[key] !== keysData2[key]) {
       return result[key] = 'changed';
     }
-    console.log(key)
     return result[key] = 'unchanged';
   });
-  console.log('before end step complit');
   return result;
 };
 
