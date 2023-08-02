@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { readFileSync } from 'fs';
 import path from 'path';
+import stylish from './stylish.js';
 
 const getFileText = (filename) => {
   const filePath = path.resolve(process.cwd(), filename);
@@ -29,7 +30,7 @@ const genDiff = (filepath1, filepath2) => {
     return { key, type: 'unchanged', value: parcedData1[key] };
   });
 
-  return diff;
+  return stylish(diff);
 };
 
 export default genDiff;
