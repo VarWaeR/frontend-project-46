@@ -15,7 +15,8 @@ const genDiff = (filepath1, filepath2) => {
   const parcedData2 = JSON.parse(data2);
   console.log(parcedData1);
   console.log(data2);
-  const keys = _.sortBy(_.union(_.keys(data1), _.keys(data2)));
+  const keys = _.sortBy(_.union(_.keys(parcedData1), _.keys(parcedData2)));
+  console.log(keys);
   const diff = keys.map((key) => {
     if (!Object.hasOwn(parcedData1, key)) {
       return { key, type: 'added', value: parcedData2[key] };
