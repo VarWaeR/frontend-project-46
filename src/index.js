@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import { readFileSync } from 'fs';
 import path from 'path';
-import stylish from './stylish.js';
+import stylish from './__utils__/stylish.js';
+import getParceData from './__utils__/getParceData.js'
 
 const getFileText = (filename) => {
   const filePath = path.resolve(process.cwd(), filename);
@@ -10,11 +11,18 @@ const getFileText = (filename) => {
 };
 
 const genDiff = (filepath1, filepath2) => {
+
   const data1 = getFileText(filepath1);
   const data2 = getFileText(filepath2);
-  const parcedData1 = JSON.parse(data1);
-  const parcedData2 = JSON.parse(data2);
+
+  const fileExt1 = path.extname(filepath1);
+  const fileExt2 = path.extname(filepath2);
+
+  const parcedData1 = getParceData(data1, fileExt1);
+  const parcedData2 = getParceData(data2, fileExt2);
+
   const keys = _.sortBy(_.union(_.keys(parcedData1), _.keys(parcedData2)));
+
   const diff = keys.map((key) => {
     if (!Object.hasOwn(parcedData1, key)) {
       return { key, type: 'added', value: parcedData2[key] };
