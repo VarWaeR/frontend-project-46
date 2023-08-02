@@ -13,10 +13,13 @@ const stylish = (diff) => {
             case 'unchanged':
                 return `    ${key}: ${value}`;
             case 'changed':
-                return `  - ${key}: ${oldValue}\n  + ${key}: ${newValue}`;
+                const str1 = `  - ${key}: ${oldValue}`;
+                const str2 = `  + ${key}: ${newValue}`;
+                return `${str1}\n${str2}`;
         }
-    })
-    return _.sortBy(stylished, [key]);
+    _.sortBy(stylished, key);
+    }).join('\n')
+    return `{\n${stylished}\n}`;
 }
 
 export default stylish;
