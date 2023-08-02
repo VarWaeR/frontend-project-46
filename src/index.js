@@ -13,24 +13,28 @@ const genDiff = (filepath1, filepath2) => {
   const data2 = getFileText(filepath2);
   const parcedData1 = JSON.parse(data1);
   const parcedData2 = JSON.parse(data2);
-  console.log(data1);
-  const keysData1 = Object.keys(parcedData1);
-  const keysData2 = Object.keys(parcedData2);
-  const result = {};
-  const keys = _.sortBy(_.uniq([...keysData1, ...keysData2]));
-  keys.map((key) => {
-    if (!Object.hasOwn(keysData1, key)) {
-      return result[key] = 'added';
+  console.log(parcedData1);
+  console.log(data2);
+  const keys = _.sortBy(_.union(_.keys(data1), _.keys(data2)));
+  const diff = keys.map((key) => {
+    if (!Object.hasOwn(parcedData1, key)) {
+      return { key, type: 'added', value: parcedData2[key] };
     }
-    if (!Object.hasOwn(keysData2, key)) {
-      return result[key] = 'deleted';
+    if (!Object.hasOwn(parcedData2, key)) {
+      return { key, type: 'deleted', value: parcedData1[key] };
     }
-    if (keysData1[key] !== keysData2[key]) {
-      return result[key] = 'changed';
+    if (_.isObject(parcedData1[key]) && _.isObject(parcedData2[key])) {
+      return { key, type: 'nested', children: buildDiff(parcedData1[key], parcedData2[key]) };
     }
-    return result[key] = 'unchanged';
+    if (parcedData1[key] !== parcedData2[key]) {
+      return {
+        key, type: 'changed', oldValue: parcedData1[key], newValue: parcedData2[key],
+      };
+    }
+    return { key, type: 'unchanged', value: parcedData1[key] };
   });
-  return result;
+
+  return diff;
 };
 
 export default genDiff;
