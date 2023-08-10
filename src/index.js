@@ -37,6 +37,8 @@ const genDiff = (filepath1, filepath2) => {
     return { key, type: 'unchanged', value: parcedData1[key] };
   });
 
+  _.sortBy(diff, key);
+
   return stylish(diff);
 };
 

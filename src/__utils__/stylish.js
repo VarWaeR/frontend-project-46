@@ -5,7 +5,6 @@ const stylish = (diff) => {
     const {
       key, value, newValue, oldValue, type,
     } = obj;
-    _.sortBy(stylished, key);
     switch (type) {
       case 'added':
         return `  + ${key}: ${value}`;
