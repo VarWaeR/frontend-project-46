@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1691667747005" clover="3.2.0">
-  <project timestamp="1691667747006" name="All files">
-    <metrics statements="38" coveredstatements="35" conditionals="14" coveredconditionals="11" methods="6" coveredmethods="6" elements="58" coveredelements="52" complexity="0" loc="38" ncloc="38" packages="2" files="3" classes="3"/>
+<coverage generated="1691673000377" clover="3.2.0">
+  <project timestamp="1691673000377" name="All files">
+    <metrics statements="36" coveredstatements="33" conditionals="14" coveredconditionals="11" methods="6" coveredmethods="6" elements="56" coveredelements="50" complexity="0" loc="36" ncloc="36" packages="2" files="3" classes="3"/>
     <package name="src">
       <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
       <file name="index.js" path="/home/varwaer/frontend-project-46/src/index.js">
@@ -30,7 +30,7 @@
       </file>
     </package>
     <package name="src.__utils__">
-      <metrics statements="17" coveredstatements="14" conditionals="8" coveredconditionals="5" methods="3" coveredmethods="3"/>
+      <metrics statements="15" coveredstatements="12" conditionals="8" coveredconditionals="5" methods="3" coveredmethods="3"/>
       <file name="getParceData.js" path="/home/varwaer/frontend-project-46/src/__utils__/getParceData.js">
         <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -40,7 +40,7 @@
         <line num="11" count="0" type="stmt"/>
       </file>
       <file name="stylish.js" path="/home/varwaer/frontend-project-46/src/__utils__/stylish.js">
-        <metrics statements="12" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <metrics statements="10" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="7" count="5" type="stmt"/>
@@ -49,10 +49,8 @@
         <line num="12" count="2" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
     </package>
   </project>
