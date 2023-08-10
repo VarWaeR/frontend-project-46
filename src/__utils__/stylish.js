@@ -5,6 +5,8 @@ const stylish = (diff) => {
     const {
       key, value, newValue, oldValue, type,
     } = obj;
+    const str1 = `  - ${key}: ${oldValue}`;
+    const str2 = `  + ${key}: ${newValue}`;
     switch (type) {
       case 'added':
         return `  + ${key}: ${value}`;
@@ -13,12 +15,12 @@ const stylish = (diff) => {
       case 'unchanged':
         return `    ${key}: ${value}`;
       case 'changed':
-        const str1 = `  - ${key}: ${oldValue}`;
-        const str2 = `  + ${key}: ${newValue}`;
         return `${str1}\n${str2}`;
+      default:
+        throw new Error(`Type '${node.type}' is not supported.`);
     }
-    _.sortBy(stylished, key);
-  }).join('\n');
+
+  })._.sortBy(stylished, key).join('\n');
   return `{\n${stylished}\n}`;
 };
 
