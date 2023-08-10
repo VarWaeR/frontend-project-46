@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 const stylish = (diff) => {
   const stylished = diff.map((obj) => {
     const {
