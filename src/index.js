@@ -1,8 +1,8 @@
-import _ from 'lodash';
 import { readFileSync } from 'fs';
 import path from 'path';
+import _ from 'lodash';
 import stylish from './__utils__/stylish.js';
-import getParceData from './__utils__/getParceData.js'
+import getParceData from './__utils__/getParceData.js';
 
 const getFileText = (filename) => {
   const filePath = path.resolve(process.cwd(), filename);
@@ -11,7 +11,6 @@ const getFileText = (filename) => {
 };
 
 const genDiff = (filepath1, filepath2) => {
-
   const data1 = getFileText(filepath1);
   const data2 = getFileText(filepath2);
 
