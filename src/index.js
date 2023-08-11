@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import path from 'path';
 import _ from 'lodash';
 import stylish from './__utils__/stylish.js';
-import getParceData from './__utils__/getParceData.js';
+import getParceData from './__utils__/parcers.js';
 
 const getFileText = (filename) => {
   const filePath = path.resolve(process.cwd(), filename);
