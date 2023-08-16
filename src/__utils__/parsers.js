@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-const getParceData = (data, ext) => {
+const getParcedData = (data, ext) => {
   switch (ext) {
     case '.json':
       return JSON.parse(data);
@@ -12,4 +12,4 @@ const getParceData = (data, ext) => {
   }
 };
 
-export default getParceData;
+export default getParcedData;
