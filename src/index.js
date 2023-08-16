@@ -10,7 +10,7 @@ const getFileText = (filename) => {
   return data;
 };
 
-const genDiff = (filepath1, filepath2) => {
+const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const data1 = getFileText(filepath1);
   const data2 = getFileText(filepath2);
 
