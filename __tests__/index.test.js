@@ -16,5 +16,5 @@ test.each(extensions)('%s format', (extension) => {
   const file1 = getFixturePath(`file1.${extension}`);
   const file2 = getFixturePath(`file2.${extension}`);
   expect(genDiff(file1, file2)).toEqual(expected);
-  expect(genDiff(file1, file2, stylish)).toEqual(expected);
+  expect(genDiff(file1, file2, 'stylish')).toEqual(expected);
 });
