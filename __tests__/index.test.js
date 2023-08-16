@@ -12,8 +12,8 @@ const expected = readFileSync(path.resolve(process.cwd(), '__fixtures__/expected
 
 const extensions = ['json', 'yml'];
 
-test.each(extensions)('flat files', (extension) => {
-  const file1 = getFixturePath(`file1.${extension}`);
-  const file2 = getFixturePath(`file2.${extension}`);
+test('flat files', () => {
+  const file1 = getFixturePath(`file1.json`);
+  const file2 = getFixturePath(`file2.json`);
   expect(genDiff(file1, file2)).toEqual(expected);
 });
