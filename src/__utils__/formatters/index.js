@@ -9,7 +9,7 @@ const getFormatData = (diff, formatName = 'stylish') => {
     case 'stylish':
       return stylish(diff);
     case 'plain':
-      return plain(diff);  
+      return plain(diff);
     default:
       throw new Error(`Format '${formatName}' is not supported.`);
   }
