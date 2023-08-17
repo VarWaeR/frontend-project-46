@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/VarWaeR/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/VarWaeR/frontend-project-46/actions)
-[![Tests and linter](https://github.com/VarWaeR/frontend-project-46/actions/workflows/lint-and-test.yml/badge.svg)](https://github.com/VarWaeR/frontend-project-46/actions/workflows/lint-and-test.yml)
+[![Lint and test](https://github.com/VarWaeR/frontend-project-46/actions/workflows/lint-and-test.yml/badge.svg)](https://github.com/VarWaeR/frontend-project-46/actions/workflows/lint-and-test.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0ca1bd12da62d25e90c5/maintainability)](https://codeclimate.com/github/VarWaeR/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0ca1bd12da62d25e90c5/test_coverage)](https://codeclimate.com/github/VarWaeR/frontend-project-46/test_coverage)
 # Description
