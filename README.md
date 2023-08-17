@@ -4,7 +4,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0ca1bd12da62d25e90c5/test_coverage)](https://codeclimate.com/github/VarWaeR/frontend-project-46/test_coverage)
 # Description
 
-***Generates differences between two files. Supporting formats: JSON, YML, YAML***
+***Generates differences between two files. Supporting formats: JSON, YML, YAML***  
 **Output formats: stylish, plain, json**
 
 ## Requirements:
