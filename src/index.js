@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs';
 import path from 'path';
-import getParcedData from './__utils__/parsers.js';
-import getBuiltDiff from './__utils__/getBuiltDiff.js';
-import getFormatData from './__utils__/formatters/index.js';
+import getParcedData from './utils/parsers.js';
+import getBuiltDiff from './utils/getBuiltDiff.js';
+import getFormatData from './utils/formatters/index.js';
 
 const getFileText = (filename) => {
   const filePath = path.resolve(process.cwd(), filename);
