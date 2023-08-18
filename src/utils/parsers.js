@@ -11,7 +11,7 @@ const getParcedData = (data, ext) => {
     case 'yml':
       return yaml.load(data);
     default:
-      throw new Error(`Extension ${ext} is not supported.`);
+      throw new Error(`Extension ${extension} is not supported.`);
   }
 };
 
