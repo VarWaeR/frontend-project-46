@@ -14,11 +14,11 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const data1 = getFileText(filepath1);
   const data2 = getFileText(filepath2);
 
-  const fileExt1 = path.extname(filepath1);
-  const fileExt2 = path.extname(filepath2);
+  const fileExtension1 = path.extname(filepath1);
+  const fileExtension2 = path.extname(filepath2);
 
-  const parcedData1 = getParcedData(data1, fileExt1);
-  const parcedData2 = getParcedData(data2, fileExt2);
+  const parcedData1 = getParcedData(data1, fileExtension1);
+  const parcedData2 = getParcedData(data2, fileExtension2);
 
   const diff = getBuiltDiff(parcedData1, parcedData2);
 

@@ -2,7 +2,7 @@ import stylish from './stylish.js';
 import json from './json.js';
 import plain from './plain.js';
 
-const getFormatData = (diff, formatName = 'stylish') => {
+const getFormatData = (diff, formatName) => {
   switch (formatName) {
     case 'json':
       return json(diff);
