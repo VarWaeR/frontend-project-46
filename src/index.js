@@ -11,8 +11,8 @@ const getFileText = (filename) => {
 };
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
-  const data1 = getFileText(filepath1);
-  const data2 = getFileText(filepath2);
+  const data1 = getFileText(filepath1).slice(1);
+  const data2 = getFileText(filepath2).slice(1);
 
   const fileExtension1 = path.extname(filepath1);
   const fileExtension2 = path.extname(filepath2);
